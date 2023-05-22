@@ -2,6 +2,27 @@
   "name": "electron-publish-example",
   "productName": "electron-publish-example",
   "version": "1.0.0",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "Thibaut0710",
+              "name": "electron-test-template"
+            }
+          }
+        }
+      ],
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip"
+        }
+      ]
+    }
+  },
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {

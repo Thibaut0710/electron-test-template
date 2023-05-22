@@ -19,16 +19,4 @@ module.exports = {
       config: {},
     },
   ],
-  publishers: [
-    {
-      name: '@electron-forge/publisher-github',
-      config: {
-        repository: {
-          owner: 'Thibaut0710',
-          name: 'electron-test-template'
-        },
-        prerelease: true
-      }
-    }
-  ]
 };
