@@ -1,10 +1,32 @@
 {
-  "name": "electron-publish-example",
-  "productName": "electron-publish-example",
+  "name": "electron-test-template",
+  "productName": "electron-test-template",
   "version": "1.0.0",
   "config": {
     "forge": {
       "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_test_template"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
       "publishers": [
         {
           "name": "@electron-forge/publisher-github",
@@ -14,11 +36,6 @@
               "name": "electron-test-template"
             }
           }
-        }
-      ],
-      "makers": [
-        {
-          "name": "@electron-forge/maker-zip"
         }
       ]
     }
